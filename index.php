@@ -1,17 +1,34 @@
+<?php session_start(); 
+$_SESSION['formStarted'] = true; ?>
+
 <!DOCTYPE html>
 <!--[if IE 7 ]> <html class="ie ie7"> <![endif]-->
 <!--[if IE 8 ]> <html class="ie ie8"> <![endif]-->
 <!--[if IE 9 ]> <html class="ie ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="" lang="en"> <!--<![endif]-->
 <head>
+ <?php   
+if (!isset($_SESSION['token']))
+{
+$token = md5(uniqid(rand(), TRUE));
+$_SESSION['token'] = $token;
+$_SESSION['token_time']=time();
+}
+
+?>
+ 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keyword" content="تطبيق قاعتي، قاعتي، قاعات للمناسبات، حجز القاعات، قاعات احتفالات، شاليهات، استراحات، تاجير قاعات، تاجير شاليهات، تاجير استراحات">
+    <meta name="description" content="تطبيق قاعتي يقدم دليل الكتروني بطريقه إحترافيه لخيارات مناسباتكم وليسهل على المستخدم عملية البحث وكما يحتوي التطبيق على تفاصيل كامله عن قاعات المناسبات بكافة أنواعها">
+	
 
     <!-- GOOGLE FONT -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css" />
-
+	<link rel="icon" href="images/favicon.ico">
+	
     <!-- CSS LIBRARY -->
     <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/lib/owl.carousel.css">
@@ -64,7 +81,7 @@
             <nav class="on-navigation text-right" data-menu-type="1200">
                 <!-- NAV -->
                 <ul class="nav">
-                    <li class="menu-item"><a href="http://qaati.net/occasions/" target="blank">دخول الأعضاء</a></li>
+                    <li class="menu-item"><a href="https://qaati.net/occasions/" target="blank">دخول الأعضاء</a></li>
                     <li class="menu-item"><a href="#contact">تواصل معنا</a></li>
                     <li class="menu-item"><a href="#pricing">حمل التطبيق الآن</a></li>
                     <li class="menu-item"><a href="#team">ميز قاعتك</a></li>
@@ -109,7 +126,7 @@
         <div class="container">
 
             <!-- SECTION HEAD -->
-            <div class="section-head text-center">
+            <div class="" align="center">
                 <h2 class="h4">تطبيق قاعتي</h2>
                 <p class="sub-title">وجهتك الاولى لكل مناسباتك</p>
             </div>
@@ -117,7 +134,7 @@
             
             <!-- DESCRIPT -->
             <div class="about-descript text-center">
-                <p>الوجهة الأولى لكل مناسباتك كما  يقدم  دليل الكتروني لأفراحكم و مناسباتكم علي مستوي المملكة ليسهل على المستخدم عملية البحث و العناء كما تحوي تفاصيل كاملة عن قاعات الزواج و المناسبات  بكافة أنواعها</p>
+              <p>تطبيق قاعتي يقدم دليل الكتروني بطريقه  إحترافيه لخيارات مناسباتكم وليسهل على المستخدم عملية البحث وكما يحتوي التطبيق على تفاصيل كامله عن قاعات المناسبات بكافة أنواعها</p>
             </div>
             <!-- END / DESCRIPT -->
         </div>
@@ -146,7 +163,7 @@
                             <h4 class="h6">البحث عن القاعات</h4>
                         </div>
                         <div class="item-body">
-                            <p>يتوفر في التطبيق خاصية البحث عن الصالات، حيث يمكن للمستخدم البحث حسب المدينة وحسب المنطقة والحي.</p>
+                            <p>يتوفر في التطبيق خاصية البحث عن القاعات، حيث يمكن للمستخدم البحث حسب المدينة وحسب المنطقة والحي</p>
                         </div>
                     </div>
                 </div>
@@ -174,7 +191,7 @@
                             <h4 class="h6">ادارة معلومات القاعات</h4>
                         </div>
                         <div class="item-body">
-                            <p>إذا كنت تمتلك قاعة يمكنك <a href="http://qaati.net/occasions/Login/add_user" target="blank">التسجيل الآن</a>، او بإمكانك في حالة إذا كنت مسجلا إدارة معلومات قاعتك من خلال الموقع الالكتروني</p>
+                            <p>إذا كنت تمتلك قاعة يمكنك <a href="https://qaati.net/occasions/Login/add_user" target="blank">التسجيل الآن</a>، او بإمكانك في حالة إذا كنت مسجلا إدارة معلومات قاعتك من خلال الموقع الالكتروني</p>
                         </div>
                     </div>
                 </div>
@@ -190,7 +207,7 @@
         <div class="container">
 
             <!-- SECTION HEAD -->
-            <div class="section-head text-center">
+            <div class="" align="center">
                 <h2 class="h4">ميز قاعتك</h2>
                 <p class="sub-title">معلومات القاعات داخل المملكة العربية السعودية بين يديك</p>
             </div>
@@ -207,7 +224,7 @@
                             <div class="icon-hover icon-hover-2"></div>
                         </div>
                         <div class="item-body text-left">
-                            <div class="team-name">
+                            <div class="">
                                 <h4 class="h4">سجل قاعتك الآن</h4>
                             </div>
                             <div class="item-descript">
@@ -225,7 +242,7 @@
                             <div class="icon-hover icon-hover-2"></div>
                         </div>
                         <div class="item-body text-left">
-                            <div class="team-name">
+                            <div class="" align="center">
                                 <h4 class="h4">المعلومات الجغرافية</h4>
                             </div>
                             <div class="item-descript">
@@ -243,7 +260,7 @@
                             <div class="icon-hover icon-hover-2"></div>
                         </div>
                         <div class="item-body text-left">
-                            <div class="team-name">
+                            <div class="" >
                                 <h4 class="h4">أولوية نتائج البحث </h4>
                             </div>
                             <div class="item-descript">
@@ -271,7 +288,7 @@
                     <p>إذا كنت تمتلك قاعة للمناسبات يسعدنا ان تضيف قاعتك للتطبيق حيث يمكنك ان تضيف معلومات عن القاعة بالإضافة للصور مجانا، سارع بالاشتراك واشترك الان</p>
                 </div>
                 <div class="item-footer">
-                    <a class="apply-team on-btn btn-style-3" href="http://qaati.net/occasions/Login/add_user" target="blank">سجل الآن</a>
+                    <a class="apply-team on-btn btn-style-3" href="https://qaati.net/occasions/Login/add_user" target="blank">سجل الآن</a>
                 </div>
             </div>
         </div>
@@ -284,7 +301,7 @@
         <div class="bg-overlay"></div>
         <div class="container">
             <!-- SECTION HEAD -->
-            <div class="section-head text-center">
+            <div class="" align="center">
                 <h2 class="h4">حمل التطبيق</h2>
                 <p class="sub-title">قم بتحميل التطبيق واستمتع بالبحث عن القاعات</p>
             </div>
@@ -311,7 +328,7 @@
                             </ul>
                         </div>
                         <div class="item-footer">
-                            <a class="on-btn btn-style-2" href="#">حمل الآن</a>
+                            <a class="on-btn btn-style-2" href="https://play.google.com/store/apps/details?id=sa.com.halls.smartvisions">حمل الآن</a>
                         </div>
                     </div>
                 </div>
@@ -323,13 +340,15 @@
                         <div class="item-heading bg-2">
                             <h4 class="h4">iPhone</h4>
                         </div>
+                       
                         <div class="item-price">
-                            
-                            <span class="mo">قريبا</span>
+                            <span class="currency">SAR</span>
+                            <span class="amount">00</span>
+                            <span class="mo">شهر</span>
                         </div>
                         <div class="item-body">
                             <ul>
-                                <li>تطبيق اندرويد</li>
+                                <li>تطبيق أيفون</li>
                                 <li>مجاني</li>
                                 <li>سهل الاستخدام</li>
                                 <li><img src="images/apple.png"></li>
@@ -358,11 +377,11 @@
                                 <li>اعلن عن قاعتك</li>
                                 <li>رسوم اشتراك رمزية</li>
                                 <li>ميز قاعتك</li>
-                                <li>رابط الاشتراك</li>
+                               <li><img src="images/windows.png"></li>
                             </ul>
                         </div>
                         <div class="item-footer">
-                            <a class="on-btn btn-style-2" href="#">اشترك الآن</a>
+                            <a class="on-btn btn-style-2" href="https://qaati.net/occasions/Login/add_user" target="blank">اشترك الآن</a>
                         </div>
                     </div>
                 </div>
@@ -484,7 +503,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <!-- SECTION HEAD -->
-            <div class="section-head text-left">
+            <div class="">
                 <h2 class="h4">تواصل معنا</h2>
                 <p class="sub-title">نرحب بمقترحاتكم واستفساراتكم على مدار اليوم</p>
             </div>
@@ -495,15 +514,17 @@
 
                         <form class="contact-form" method="POST" action="" id="from1">
                             <div class="form-item fl">
-                                <input type="text" placeholder="الاسم" id="name" name="name" required="required"/>
+                                <input type="text" placeholder="الاسم" id="name" name="name" required="required" />
                             </div>
                             <div class="form-item fr">
-                                <input type="email" placeholder="الايميل" id="email" name="email" required="required"/>
+                                <input type="email" placeholder="الايميل" id="email" name="email" required="required" />
 
                             </div>
                             <div class="form-textarea-wrapper">
                                 <textarea id="message" Columns="50" Rows="5" placeholder="الرسالة" name="message" required="required"></textarea>
                                 <input type="hidden" id="lang" name="lang" value="ar" />
+                                <input type="hidden" id="token" name="token" value="<?php echo $_SESSION['token'];  ?>" />
+                                <input type="hidden" id="token_time" name="token_time" value="<?php echo $_SESSION['token_time'];  ?>" />
                             </div>
                             <div class="form-submit">
                                 <input type="button" id="sendMail" class="on-btn btn-style-2" value="أرسل" />                                     
@@ -526,6 +547,10 @@
                         <div class="phone">
                             <i class="fa fa-phone"></i>
                             <span style="direction:ltr; text-align:right;">+966 114874545</span>
+                        </div>
+                        <div class="whatsapp">
+<i class=""><img src="777.png" width="20" high="20"></i>
+<span>00966-500158833</span>
                         </div>
                     </div>
                 </div>
@@ -575,17 +600,23 @@
             
             if(! isValidEmailAddress($("#email").val()) ) {
                 $(".validate").show();
-               $("#sentMailDiv").prepend("<p class='bg-danger validate' style='padding:5px'>Not a valid email address </p>"); 
+               $("#sentMailDiv").prepend("<p class='bg-danger validate' style='padding:5px'>البريد الالكتروني غير صحيح </p>"); 
             }
             
             if (isValidEmailAddress($("#email").val()) && requiredName() && requiredMessage()) {
-                $(this).val("Please Waite...").css("background-color", "gray");
+                $(this).val("يتم الارسال").css("background-color", "gray");
                 $.ajax({
-                    url: './sendmail.php',
+                    url: './send.php',
                     type: 'POST',
-                    data: {message: $("#message").val(), name: $("#name").val(), email: $("#email").val(), lang: $("#lang").val()},
+                    data: {message: $("#message").val(), name: $("#name").val(), email: $("#email").val(), lang: $("#lang").val(), token_time: $("#token_time").val()},
                     success: function (result) {
+                        if(result=='لقد انتهى الزمن المتاح لإرسال الرسالة'){
+                        $("#sentMailDiv").prepend("<p class='bg-warning' style='padding:5px'>" + result + "</p>");
+                        $("#sendMail").val("اعادة الارسال").css("background-color", "gray"); }
+                        else{
                         $("#sentMailDiv").prepend("<p class='bg-success' style='padding:5px'>" + result + "</p>");
+                        $("#sendMail").val("تم الارسال").css("background-color", "gray");
+                    }
                     },
                     error: function (error) {
                         console.log(error);
